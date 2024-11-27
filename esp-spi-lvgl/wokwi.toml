@@ -1,0 +1,12 @@
+[wokwi]
+version = 1
+firmware = 'build/flasher_args.json'
+elf = 'build/esp-screen.elf'
+gdbServerPort=1234
+
+
+# Forward http://localhost:8180 to port 80 on the simulated ESP32, To forward multiple ports, add multiple [[net.forward]] sections.
+[[net.forward]]
+from = "localhost:8180"
+to = "target:80"
+
